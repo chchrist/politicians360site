@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Politicians 360 - Join the Queue or Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #2c3e50;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+        }
+        .logo {
+            max-width: 300px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .queue-info {
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .form-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        .join-queue-form, .login-form {
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            flex: 1;
+        }
+        .join-queue-form input[type="email"],
+        .login-form input[type="email"],
+        .login-form input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .join-queue-form button,
+        .login-form button {
+            background-color: #3498db;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+        .join-queue-form button:hover,
+        .login-form button:hover {
+            background-color: #2980b9;
+        }
+        footer {
+            background-color: #2c3e50;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
+          <style>
+            .text { font-family: Arial, sans-serif; font-weight: bold; }
+            .politicians { font-size: 24px; fill: #fff; }
+            .number { font-size: 28px; fill: #3498db; }
+            .seat { fill: #3498db; }
+            .podium { fill: #fff; }
+          </style>
+          <!-- Outer ring of seats -->
+          <path d="M100 90 A80 80 0 0 1 20 10 A80 80 0 0 1 180 10 A80 80 0 0 1 100 90" fill="none" stroke="#fff" stroke-width="10"/>
+          <!-- Inner rings of seats -->
+          <path d="M100 80 A60 60 0 0 1 40 20 A60 60 0 0 1 160 20 A60 60 0 0 1 100 80" fill="none" stroke="#3498db" stroke-width="8"/>
+          <path d="M100 70 A40 40 0 0 1 60 30 A40 40 0 0 1 140 30 A40 40 0 0 1 100 70" fill="none" stroke="#3498db" stroke-width="6"/>
+          <!-- Representative seats -->
+          <circle cx="100" cy="85" r="3" class="seat"/>
+          <circle cx="30" cy="15" r="3" class="seat"/>
+          <circle cx="170" cy="15" r="3" class="seat"/>
+          <circle cx="50" cy="25" r="3" class="seat"/>
+          <circle cx="150" cy="25" r="3" class="seat"/>
+          <circle cx="70" cy="35" r="3" class="seat"/>
+          <circle cx="130" cy="35" r="3" class="seat"/>
+          <!-- Central podium -->
+          <rect x="95" y="45" width="10" height="10" class="podium"/>
+          <!-- Text -->
+<!--           <text x="10" y="95" class="text politicians">POLITICIANS</text> -->
+<!--           <text x="165" y="95" class="text number">360</text> -->
+        </svg>
+    </header>
+    <main>
+        <section class="queue-info">
+            <h2>Welcome to Politicians 360</h2>
+            <p>Due to overwhelming interest, we've temporarily limited access to ensure the best experience for all users.</section>
+        <!--<div class="form-container">
+            <section class="join-queue-form">
+                <h2>Join the Waiting List</h2>
+                <form id="queueForm">
+                    <label for="queueEmail">Email Address:</label>
+                    <input type="email" id="queueEmail" name="queueEmail" required placeholder="Enter your email">
+                    <button type="submit">Join the Queue</button>
+                </form>
+            </section>
+            <section class="login-form">
+                <h2>Existing User Login</h2>
+                <form id="loginForm">
+                    <label for="loginEmail">Email Address:</label>
+                    <input type="email" id="loginEmail" name="loginEmail" required placeholder="Enter your email">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required placeholder="Enter your password">
+                    <button type="submit">Login</button>
+                </form>
+            </section>
+        </div>-->
+    </main>
+    <footer>
+        <p>&copy; 2024 Politicians 360. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('queueForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            var email = document.getElementById('queueEmail').value;
+            alert('Thank you for joining our queue! We\'ll notify you at ' + email + ' when access to Politicians 360 becomes available.');
+            document.getElementById('queueEmail').value = '';
+        });
+
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            var email = document.getElementById('loginEmail').value;
+            var password = document.getElementById('password').value;
+            // In a real application, you would send these credentials to your server for authentication
+            alert('Login attempt for ' + email + '. In a real application, we would validate your credentials here.');
+            document.getElementById('loginEmail').value = '';
+            document.getElementById('password').value = '';
+        });
+    </script>
+</body>
+</html>
