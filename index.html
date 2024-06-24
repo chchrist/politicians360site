@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Politicians 360 - Join the Queue or Login</title>
+    <title>Politicians 360</title>
+    <meta name="description" content="Politicians transparency hub. Summaries and sentiment analysis of politicians based on public articles">
+    <meta name="keywords" content="politicians, transparency, voters, knowledge, informed">
+    
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -121,48 +124,9 @@
         <section class="queue-info">
             <h2>Welcome to Politicians 360</h2>
             <p>Due to overwhelming interest, we've temporarily limited access to ensure the best experience for all users.</section>
-        <!--<div class="form-container">
-            <section class="join-queue-form">
-                <h2>Join the Waiting List</h2>
-                <form id="queueForm">
-                    <label for="queueEmail">Email Address:</label>
-                    <input type="email" id="queueEmail" name="queueEmail" required placeholder="Enter your email">
-                    <button type="submit">Join the Queue</button>
-                </form>
-            </section>
-            <section class="login-form">
-                <h2>Existing User Login</h2>
-                <form id="loginForm">
-                    <label for="loginEmail">Email Address:</label>
-                    <input type="email" id="loginEmail" name="loginEmail" required placeholder="Enter your email">
-                    <label for="password">Password:</label>
-                    <input type="password" id="password" name="password" required placeholder="Enter your password">
-                    <button type="submit">Login</button>
-                </form>
-            </section>
-        </div>-->
     </main>
     <footer>
         <p>&copy; 2024 Politicians 360. All rights reserved.</p>
     </footer>
-
-    <script>
-        document.getElementById('queueForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            var email = document.getElementById('queueEmail').value;
-            alert('Thank you for joining our queue! We\'ll notify you at ' + email + ' when access to Politicians 360 becomes available.');
-            document.getElementById('queueEmail').value = '';
-        });
-
-        document.getElementById('loginForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            var email = document.getElementById('loginEmail').value;
-            var password = document.getElementById('password').value;
-            // In a real application, you would send these credentials to your server for authentication
-            alert('Login attempt for ' + email + '. In a real application, we would validate your credentials here.');
-            document.getElementById('loginEmail').value = '';
-            document.getElementById('password').value = '';
-        });
-    </script>
 </body>
 </html>
